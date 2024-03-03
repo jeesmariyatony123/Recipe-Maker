@@ -1,0 +1,77 @@
+.homeimage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: '90%';
+    height: 60vh;
+}
+
+.header {
+    background-image: url(https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?cs=srgb&dl=pexels-ella-olsson-1640774.jpg&fm=jpg);
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header h1 {
+    text-shadow: 2px 3px #808888;
+}
+
+.syne-tactile-regular {
+    font-family: "Syne Tactile", system-ui;
+    font-weight: 700;
+    font-size: 5em;
+    font-style: normal;
+
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+}
+
+.logos:after {
+    right: 0;
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 40vh;
+    width: 30vw;
+    margin: 0 40px;
+    border-radius: 9px;
+}
